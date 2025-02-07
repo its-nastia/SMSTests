@@ -80,17 +80,6 @@ public class StudentHttpServer {
             int page = 0;
             int size = 5;
 
-//            if (query == null) {
-//                List<Student> students = studentService.getStudents();
-//                return objectMapper.writeValueAsString(students);
-//            } else {
-//                int id = Integer.parseInt(query.split("=")[1]);
-//                Student student = studentService.getStudents().stream()
-//                        .filter(s -> s.getId() == id)
-//                        .findFirst()
-//                        .orElse(null);
-//                return student != null ? objectMapper.writeValueAsString(student) : "{\"error\": \"Student not found\"}";
-//            }
             if (query != null) {
                 String[] queryParam = query.split("&");
                 for (String param : queryParam) {
